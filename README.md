@@ -26,3 +26,78 @@ Naive baseline RMSE: 37.91
 **Tools used:** Python, Pandas, NumPy, Scikit-learn, TensorFlow/Keras, Matplotlib
 
 **File:** `stock_price_forecasting_nifty50.ipynb`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Task 5: Toxic Comment Classification
+
+**Problem:** Classify comments into six toxicity categories using machine learning and natural language processing.
+
+**Dataset:** Jigsaw Toxic Comment Classification Challenge.
+
+**Technologies:** Python, Pandas, Scikit-learn, TF-IDF, Logistic Regression, Matplotlib, and Seaborn.
+
+**Methodology:**
+1. Load and explore the dataset.
+2. Prepare the comment text and toxicity labels.
+3. Extract text features using TF-IDF.
+4. Train a multi-label Logistic Regression classifier.
+5. Evaluate the model using F1 score, precision, recall, Hamming loss, and ROC-AUC.
+6. Save the trained model and test predictions.
+
+
+Label	Probability	Prediction
+0	toxic	0.027028	False
+1	severe_toxic	0.009513	False
+2	obscene	0.023669	False
+3	threat	0.019980	False
+4	insult	0.059543	False
+5	identity_hate	0.014216	False
+
+
+label	probability	predicted_at_threshold
+0	insult	0.999267	True
+1	toxic	0.998389	True
+2	obscene	0.939361	True
+3	severe_toxic	0.368133	False
+4	identity_hate	0.311768	False
+5	threat	0.025918	False
+
+
+Per-label classification report:
+               precision    recall  f1-score   support
+
+        toxic       0.66      0.85      0.74      3056
+ severe_toxic       0.30      0.81      0.44       321
+      obscene       0.73      0.87      0.79      1715
+       threat       0.30      0.76      0.43        74
+       insult       0.60      0.86      0.70      1614
+identity_hate       0.28      0.71      0.40       294
+
+    micro avg       0.59      0.85      0.70      7074
+    macro avg       0.48      0.81      0.59      7074
+ weighted avg       0.63      0.85      0.72      7074
+  samples avg       0.06      0.08      0.07      7074
+
+
+
+
+
